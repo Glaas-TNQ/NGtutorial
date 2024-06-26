@@ -18,4 +18,14 @@ export class ProductsService {
       responseType: 'json',
     });
   };
+
+  addProducts = (url: string, body: any): Observable<any> => {
+    return this.apiService.post(url, body, {});
+  };
+  editProduct = (url: string, body: any): Observable<any> => {
+    return this.apiService.put(url, body, {});
+  };
+  deleteProducts = (url: string): Observable<any> => {
+    return this.apiService.delete(url, {});
+  };
 }
